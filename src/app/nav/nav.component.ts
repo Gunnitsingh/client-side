@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AccountService } from '../services/account.service';
-import { Observable, of } from 'rxjs';
-import { User } from '../_models/user';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -29,7 +27,6 @@ export class NavComponent implements OnInit {
         this.router.navigate(['/members']) ;
         this.toaster.success("Login successful")
       },
-      error:error=>this.toaster.error(error.error)
     })
     
    }
