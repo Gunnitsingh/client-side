@@ -13,15 +13,10 @@ export class AppComponent implements OnInit{
   constructor (private httpService:HttpServiceService, private accountService:AccountService){}
 
   ngOnInit(): void {
- this.getUsers();
  this.setCurrentUser();
   }
 
-  getUsers(){
-    this.httpService.getUsers().subscribe(data=>{
-      this.userData = data
-          });
-  }
+
 
   setCurrentUser(){
     const userStr =localStorage.getItem('user');

@@ -24,7 +24,7 @@ export class NavComponent implements OnInit {
   login(form:NgForm){
     this.accountService.login(form.value).subscribe({
       next: _ => {
-        this.router.navigate(['/members']) ;
+        this.router.navigate(['members']) ;
         this.toaster.success("Login successful")
       },
     })
