@@ -58,4 +58,5 @@ gallaryImages:NgxGalleryImage[]=[];
     return imgUrl;
   }
 
+  onLike(){}
 }
