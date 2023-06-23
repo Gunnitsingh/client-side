@@ -12,27 +12,27 @@ import { ToastrService } from 'ngx-toastr';
 export class NavComponent implements OnInit {
 
   constructor(public accountService: AccountService,
-    private router:Router,
-    private toaster : ToastrService) { }
+    private router: Router,
+    private toaster: ToastrService) { }
 
   ngOnInit(): void {
-    
+
   }
 
-  
 
-  login(form:NgForm){
+
+  login(form: NgForm) {
     this.accountService.login(form.value).subscribe({
       next: _ => {
-        this.router.navigate(['members']) ;
+        this.router.navigate(['members']);
         this.toaster.success("Login successful")
       },
     })
-    
-   }
 
-   logout(){
+  }
+
+  logout() {
     this.accountService.logout();
     this.router.navigateByUrl('/')
-   }
- }
+  }
+}
